@@ -1,0 +1,7 @@
+@mixin boxFlex($justify-content, $alig-items, $direction: row, $wrap: nowrap){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $alig-items;
+    flex-wrap: $wrap;
+}

@@ -1,0 +1,71 @@
+@import "base/reset", "base/variables.scss", "base/mixin";
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.container-card {
+    @include boxFlex(none, center, column);
+}
+
+.card {
+    box-shadow: $shadow;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+    @include boxFlex(center, center, column);
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    &__time {
+        color: $pink;
+        margin: 1.3rem 0;
+        font-size: 1rem;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__description {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    &__footer{
+        display: flex;
+        text-align: center;
+        background-color: $pink;
+        width: 100%;
+        justify-content: center;
+        color: #fff;
+        font-weight: 300;
+    }
+
+    &__footer-element{
+        padding: 1rem;
+        border: none;
+        border-right: 1px solid #000;
+    }
+}
+
+@media (min-width:500px){
+    .container-card{
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .card{
+        width: 45%;
+        margin: 3rem 1rem;
+    }
+}
+
+@media (min-width:940px){
+    .card{
+        width: 29%;
+    }
+}
